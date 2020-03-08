@@ -228,12 +228,12 @@ namespace Coverity.Security.Tests
         {
             foreach (var url in urlTrueTests)
             {
-                string filtered = Filter.AsFlexibleURL(url);
+                string filtered = Filter.AsFlexibleUrl(url);
                 Assert.IsTrue(filtered == url);
             }
             foreach (var url in urlFlexibleTrueTests)
             {
-                string filtered = Filter.AsFlexibleURL(url);
+                string filtered = Filter.AsFlexibleUrl(url);
                 Assert.IsTrue(filtered == url);
             }
         }
@@ -243,7 +243,7 @@ namespace Coverity.Security.Tests
         {
             foreach (var url in urlFalseTests)
             {
-                string filtered = Filter.AsFlexibleURL(url);
+                string filtered = Filter.AsFlexibleUrl(url);
                 Assert.IsTrue(filtered == "./" + url);
             }
         }
@@ -253,7 +253,7 @@ namespace Coverity.Security.Tests
         {
             foreach (var url in urlFalseTests)
             {
-                string filtered = Filter.AsURL(url);
+                string filtered = Filter.AsUrl(url);
                 Assert.IsTrue(filtered == "./" + url);
             }
         }
@@ -263,7 +263,7 @@ namespace Coverity.Security.Tests
         {
             foreach (var url in urlTrueTests)
             {
-                string filtered = Filter.AsURL(url);
+                string filtered = Filter.AsUrl(url);
                 Assert.IsTrue(filtered == url);
             }
         }

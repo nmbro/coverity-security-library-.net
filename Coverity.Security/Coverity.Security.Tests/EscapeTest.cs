@@ -25,7 +25,6 @@
  *   OF SUCH DAMAGE.
  */
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Coverity.Security;
 using System;
 
 namespace Coverity.Security.Tests
@@ -318,7 +317,7 @@ namespace Coverity.Security.Tests
                 Escape.SqlLikeClause(null, '\\');
                 Escape.SqlLikeClause(null);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Test must fail if any exception is thrown
                 Assert.IsTrue(false);
